@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">  
+	<link href="css.css" rel="stylesheet">
+
+	<body>
+		<div ng-app="MyApp">
+			<div ng-controller="MyCtrl">
+				<span id="test"></span>
+				<table>
+					<thead>
+						<tr>
+							<th><a ng-click="Sort('userId')" class="first"><i class="icon-sort"></i></a></th>
+							<th><a ng-click="Sort('id')" class="first"><i class="icon-sort"></i></a></th>
+							<th><a ng-click="Sort('title')" class="first">title<i class="icon-sort"></i></a></th>
+							<th><a ng-click="Sort('body')" class="first">Body<i class="icon-sort"></i></a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in items | orderBy:sort:reverse">
+							<td>{{item.userId}}</td>
+							<td>{{item.id}}</td>
+							<td>{{item.title}}</td>
+							<td>{{item.body}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+	<script src="recordController.js"></script>
+</html>

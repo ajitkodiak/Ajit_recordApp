@@ -1,0 +1,9 @@
+ tr td{
+	border:1px Solid gray;
+}
+tr:nth-child(2n+1){
+	background:#fff;
+}
+tr:nth-child(2n){
+	background:#d3d3d3;
+}
